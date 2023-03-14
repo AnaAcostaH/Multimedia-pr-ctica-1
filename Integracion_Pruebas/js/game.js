@@ -52,9 +52,6 @@ var game = {
 		mouse.init();
 
 		// Cargar todos los efectos de sonido y música de fondo
-	
-		//"Kindergarten" by Gurdonark
-		//http://ccmixter.org/files/gurdonark/26491 is licensed under a Creative Commons license
 
 		game.backgroundMusic = loader.loadSound('audio/lava');
 		game.slingshotReleasedSound = loader.loadSound("audio/released");
@@ -474,7 +471,7 @@ var levels = {
 			]
 		},
 		{   // Tercer nivel
-			foreground:'desert-foreground',
+			foreground:'mario-foreground',
 			background:'clouds-background',
 			entities:[
 				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
@@ -489,7 +486,7 @@ var levels = {
 				{type:"block", name:"glass", x:670,y:255,angle:90,width:100,height:25},
 				{type:"block", name:"glass", x:770,y:255,angle:90,width:100,height:25},
 				{type:"block", name:"tube", x:720,y:192.5,width:100,height:25},	
-
+				
 				{type:"villain", name:"villain10",x:765,y:400,calories:450},
 				{type:"villain", name:"villain11",x:670,y:405,calories:400},
 				{type:"villain", name:"villain12",x:715,y:155,calories:400},
@@ -598,84 +595,37 @@ var entities = {
 			density:2.4,
 			friction:0.4,
 			restitution:0.15,
+			//extension: "png",
 		},
 		"wood":{
 			fullHealth:500,
 			density:0.7,
 			friction:0.4,
 			restitution:0.4,
+			//extension: "png",
 		},
 		"dirt":{
 			density:3.0,
 			friction:1.5,
-			restitution:0.2,	
+			restitution:0.2,
+			//extension: "png",	
 		},
-		"burger":{
-			shape:"circle",
-			fullHealth:40,
-			radius:25,
-			density:1,
-			friction:0.5,
-			restitution:0.4,	
-		},
-		"sodacan":{
-			shape:"rectangle",
-			fullHealth:80,
-			width:40,
-			height:60,
-			density:1,
-			friction:0.5,
-			restitution:0.7,	
-		},
-		"fries":{
-			shape:"rectangle",
-			fullHealth:50,
-			width:40,
-			height:50,
-			density:1,
-			friction:0.5,
-			restitution:0.6,	
-		},
-		"apple":{
-			shape:"circle",
-			radius:25,
-			density:1.5,
-			friction:0.5,
-			restitution:0.4,	
-		},
-		"orange":{
-			shape:"circle",
-			radius:25,
-			density:1.5,
-			friction:0.5,
-			restitution:0.4,	
-		},
-		"strawberry":{
-			shape:"circle",
-			radius:15,
-			density:2.0,
-			friction:0.5,
-			restitution:0.4,	
-		},
+		
 		// ENTIDADES NUEVAS
 
-		"liana":{
-			fullHealth:1000,
-			density:10,
-			friction:0.4,
-			restitution:0.01,
-		},
 		"iron":{
 			fullHealth:10000,
 			density:30,
 			friction:0.4,
 			restitution:0.01,
+			//extension: "png",
 		},
 		"tube":{
 			fullHealth:100,
 			density:2.4,
 			friction:0.4,
 			restitution:0.15,
+			//extension: "png",
 		},
 		"zapatilla":{
 			shape:"circle",
@@ -683,7 +633,7 @@ var entities = {
 			density:1.0,
 			friction:0.5,
 			restitution:0.4,
-			
+			//extension: "png",
 		},
 		"can":{
 			shape:"circle",
@@ -691,7 +641,7 @@ var entities = {
 			density:1.0,
 			friction:0.5,
 			restitution:0.4,
-			
+			//extension: "png",
 		},
 		"sword":{
 			shape:"circle",
@@ -699,7 +649,7 @@ var entities = {
 			density:1.0,
 			friction:0.5,
 			restitution:0.4,
-			
+			//extension: "png",
 		},
 		"ball":{
 			shape:"circle",
@@ -707,62 +657,15 @@ var entities = {
 			density:1.0,
 			friction:0.5,
 			restitution:0.4,
-			
-		},
-		"tomato":{
-			shape:"circle",
-			radius:25,
-			density:1.0,
-			friction:0.5,
-			restitution:0.4,
-			
+			//extension: "png",
 		},
 		"banana":{
 			shape:"circle",
 			radius:25,
 			density:0.5,
 			friction:0.5,
-			restitution:0.4,		
-		},
-		"watermelon":{
-			shape:"circle",
-			radius:25,
-			density:2.5,
-			friction:0.5,
-			restitution:0.4,		
-		},
-		"pineapple":{
-			shape:"circle",
-			radius:25,
-			density:2.0,
-			friction:0.5,
-			restitution:0.4,	
-		},
-		"donut":{
-			shape:"circle",
-			fullHealth:80,
-			radius:30,
-			density:1.0,
-			friction:0.5,
 			restitution:0.4,
-		},
-		"kebab":{
-			shape:"rectangle",
-			width:50,
-			height:30,
-			fullHealth:10,
-			radius:10,
-			density:1.0,
-			friction:0.5,
-			restitution:0,
-		},
-		"pizza":{
-			shape:"circle",
-			fullHealth:300,
-			radius:30,
-			density:1.0,
-			friction:0.5,
-			restitution:0.4,
+			//extension: "png",	
 		},
 		"villain1":{
 			shape:"circle",
@@ -771,6 +674,7 @@ var entities = {
 			density:1.0,
 			friction:0.5,
 			restitution:0.4,
+			//extension: "png",
 		},
 		"villain2":{
 			shape:"circle",
@@ -779,6 +683,7 @@ var entities = {
 			density:1.0,
 			friction:0.5,
 			restitution:0.4,
+			//extension: "png",
 		},
 		"villain3":{
 			shape:"circle",
@@ -787,6 +692,7 @@ var entities = {
 			density:1.0,
 			friction:0.5,
 			restitution:0.4,
+			//extension: "png",
 		},
 		"villain4":{
 			shape:"circle",
@@ -795,6 +701,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villain5":{
 			shape:"circle",
@@ -803,6 +710,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villain6":{
 			shape:"circle",
@@ -811,6 +719,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villain7":{
 			shape:"circle",
@@ -819,6 +728,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villain8":{
 			shape:"circle",
@@ -827,6 +737,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villain9":{
 			shape:"circle",
@@ -835,6 +746,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villain10":{
 			shape:"circle",
@@ -843,6 +755,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villain11":{
 			shape:"circle",
@@ -851,6 +764,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villain12":{
 			shape:"circle",
@@ -859,6 +773,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 		"villainplant":{
 			shape:"circle",
@@ -867,6 +782,7 @@ var entities = {
 			density:0.6,
 			friction:0.5,
 			restitution:0.6,
+			//extension: "png",
 		},
 
 		"hammer":{
@@ -874,35 +790,48 @@ var entities = {
 			radius:25,
 			density:0.5,
 			friction:0.5,
-			restitution:0.4,		
+			restitution:0.4,
+			//extension: "png",		
 		},
 		"rock":{
 			shape:"circle",
 			radius:25,
 			density:0.5,
 			friction:0.5,
-			restitution:0.4,		
+			restitution:0.4,
+			//extension: "png",		
 		},
 		"bow":{
 			shape:"circle",
 			radius:25,
 			density:0.5,
 			friction:0.5,
-			restitution:0.4,		
+			restitution:0.4,
+			//extension: "png",		
 		},
 		"mushroom":{
 			shape:"circle",
 			radius:25,
 			density:0.5,
 			friction:0.5,
-			restitution:0.4,		
+			restitution:0.4,
+			//extension: "png",		
 		},
 		"tortoise":{
 			shape:"circle",
 			radius:25,
 			density:0.5,
 			friction:0.5,
-			restitution:0.4,		
+			restitution:0.4,
+			//extension: "png",		
+		},
+		"plant":{
+			shape:"circle",
+			radius:25,
+			density:0.5,
+			friction:0.5,
+			restitution:0.4,
+			//extension: "png",		
 		}
 
 	},
@@ -918,8 +847,13 @@ var entities = {
 				entity.health = definition.fullHealth;
 				entity.fullHealth = definition.fullHealth;
 				entity.shape = "rectangle";	
-				entity.sprite = loader.loadImage("images/entities/"+entity.name+".png");						
+
+				//entity.extension = definition.extension;
+
+				entity.sprite = loader.loadImage("images/entities/"+entity.name+".png"||".gif");					
+				entity.shape = definition.shape;  
 				entity.breakSound = game.breakSound[entity.name];
+				
 				box2d.createRectangle(entity,definition);				
 				break;
 			case "ground": // Rectángulos simples
@@ -932,8 +866,7 @@ var entities = {
 			case "villain": // Pueden ser círculos o rectángulos
 				entity.health = definition.fullHealth;
 				entity.fullHealth = definition.fullHealth;
-				entity.sprite = loader.loadImage("images/entities/"+entity.name+".png");
-				//entity.sprite = loader.loadImage("images/entities/"+entity.name+".gif");
+				entity.sprite = loader.loadImage("images/entities/"+entity.name+".png"||".gif");					
 				entity.shape = definition.shape;  
 				entity.bounceSound = game.bounceSound;
 				if(definition.shape == "circle"){
