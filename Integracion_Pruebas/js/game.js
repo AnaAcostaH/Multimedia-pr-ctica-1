@@ -491,7 +491,8 @@ var levels = {
 				{type:"villain", name:"villain11",x:670,y:405,calories:400},
 				{type:"villain", name:"villain12",x:715,y:155,calories:400},
 
-				{type:"hero", name:"tortoise",x:40,y:415},
+				{type:"hero", name:"tortoise",x:30,y:415},
+				{type:"hero", name:"star",x:140,y:415},
 				{type:"hero", name:"mushroom",x:80,y:405},
 
 			]
@@ -652,6 +653,14 @@ var entities = {
 			//extension: "png",
 		},
 		"ball":{
+			shape:"circle",
+			radius:25,
+			density:1.0,
+			friction:0.5,
+			restitution:0.4,
+			//extension: "png",
+		},
+		"star":{
 			shape:"circle",
 			radius:25,
 			density:1.0,
